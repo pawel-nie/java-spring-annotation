@@ -1,12 +1,14 @@
 package com.springdemo;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.Random;
 
 @Component
+@PropertySource("classpath:fileFortunes")
 public class FileFortuneService implements FortuneService{
 
     @Value("${firstFortuneService}")
